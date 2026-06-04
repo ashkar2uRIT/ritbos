@@ -1,0 +1,23 @@
+/* Jobs — worker rows, calculator (legacy), job-specific UI */
+/* ── Worker table ── */
+.worker-row{display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr 1fr 32px;gap:6px;align-items:center;margin-bottom:6px;}
+.worker-row input,.worker-row select{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:6px 8px;color:var(--text);font-size:12px;outline:none;width:100%;}
+.worker-row input:focus,.worker-row select:focus{border-color:var(--accent);}
+.worker-row .rm{background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer;border-radius:4px;transition:color var(--transition);}
+.worker-row .rm:hover{color:var(--danger);}
+
+/* ── Calculator ── */
+.calc-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.calc-section-title{font-size:13px;font-weight:600;}
+.calc-line{display:grid;grid-template-columns:3fr 1fr 1fr 1fr 32px;gap:8px;align-items:center;margin-bottom:6px;}
+.calc-line input{background:var(--surface2);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:6px 8px;color:var(--text);font-size:12px;outline:none;width:100%;}
+.calc-line input:focus{border-color:var(--accent);}
+.calc-line .rm{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;border-radius:3px;}
+.calc-line .rm:hover{color:var(--danger);}
+.calc-total-row{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid var(--border);margin-top:4px;font-size:13px;font-weight:600;}
+.summary-box{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px;}
+.summary-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.summary-row:last-child{border-bottom:none;}
+.summary-row.total{font-weight:700;border-top:2px solid var(--border2);margin-top:4px;padding-top:10px;}
+.progress-bar{height:4px;background:var(--surface3);border-radius:2px;overflow:hidden;margin-top:4px;}
+.progress-fill{height:100%;border-radius:2px;transition:width 0.3s;}

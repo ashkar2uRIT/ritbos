@@ -1,0 +1,50 @@
+/* RAKHSA ONE — Theme tokens, resets, buttons, badges, toast, utilities */
+
+:root{
+  --bg:#111317;--surface:#1a1c20;--surface2:#1e2024;--surface3:#282a2e;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
+  --text:#e2e2e8;--muted:#8a9485;--muted2:#40493d;
+  --accent:#88d982;--on-accent:#003909;--accent2:#5bb8a0;--accent3:#e87d5b;
+  --danger:#ffb4ab;--success:#88d982;--info:#5ba8e8;--warning:#e8b86d;
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+  --radius:8px;--radius-lg:12px;--radius-sm:4px;
+  --sidebar:240px;--transition:0.15s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;min-height:100vh;overflow-x:hidden;}
+button,input,select,textarea{font-family:var(--font);}
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--radius);border:none;font-size:13px;font-weight:500;cursor:pointer;transition:all var(--transition);white-space:nowrap;}
+.btn-primary{background:var(--accent);color:var(--on-accent);}.btn-primary:hover{background:#a3f69c;transform:translateY(-1px);}
+.btn-ghost{background:transparent;border:1px solid var(--border2);color:var(--text);}.btn-ghost:hover{background:var(--surface2);}
+.btn-success{background:var(--success);color:#001a08;}.btn-success:hover{background:#6dce8c;}
+.btn-danger{background:rgba(232,97,74,0.12);border:1px solid rgba(232,97,74,0.25);color:var(--danger);}.btn-danger:hover{background:rgba(232,97,74,0.22);}
+.btn-sm{padding:5px 10px;font-size:12px;}.btn-xs{padding:3px 8px;font-size:11px;}.btn-icon{padding:6px 8px;}
+
+/* ── Badges ── */
+.badge{display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;font-size:10.5px;font-family:var(--mono);font-weight:500;white-space:nowrap;}
+.badge-green{background:rgba(91,184,122,0.12);color:var(--success);}
+.badge-amber{background:rgba(232,184,109,0.12);color:var(--warning);}
+.badge-red{background:rgba(232,97,74,0.12);color:var(--danger);}
+.badge-blue{background:rgba(91,168,232,0.12);color:var(--info);}
+.badge-teal{background:rgba(91,184,160,0.12);color:var(--accent2);}
+.badge-orange{background:rgba(232,125,91,0.12);color:var(--accent3);}
+.badge-gray{background:rgba(255,255,255,0.06);color:var(--muted);}
+.badge-purple{background:rgba(180,120,220,0.12);color:#b478dc;}
+
+/* ── Toast ── */
+#toast-container{position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:8px;pointer-events:none;}
+.toast{padding:10px 14px;border-radius:var(--radius);font-size:12px;font-weight:500;display:flex;align-items:center;gap:8px;opacity:0;transform:translateY(8px);transition:all 0.2s;min-width:220px;border:1px solid;}
+.toast.show{opacity:1;transform:translateY(0);}
+.toast-success{background:#0d1f10;border-color:rgba(91,184,122,0.3);color:var(--success);}
+.toast-error{background:#1f0d0a;border-color:rgba(232,97,74,0.3);color:var(--danger);}
+.toast-info{background:#0a101f;border-color:rgba(91,168,232,0.3);color:var(--info);}
+
+/* ── Misc ── */
+.mono{font-family:var(--mono);}
+.text-accent{color:var(--accent);}.text-success{color:var(--success);}.text-danger{color:var(--danger);}.text-info{color:var(--info);}.text-muted{color:var(--muted);}
+.fs-xs{font-size:11px;}.fs-sm{font-size:12px;}
